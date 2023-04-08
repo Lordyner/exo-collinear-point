@@ -33,7 +33,7 @@ public class FastCollinearPoints {
         for (int first = 0; first < sortedPoints.length - 3; first++) {
             // On tri le tableau des points, à partir de l'index i+1 jusqu'à la fin, en fonction du slope des points à i
             Arrays.sort(sortedPoints, first + 1, sortedPoints.length, sortedPoints[first].slopeOrder());
-            int second = 0;
+            int second = first+1;
             
             // On parcourt le tableau de points à partir de i + 2          
             for (int third = second + 1; third < sortedPoints.length; third++) {   
